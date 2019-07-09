@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function myFunction(){
+        let firstArg = arguments[0];
+        let secondArg = arguments[1];
+        let calculator = firstArg + secondArg;
+        if (firstArg > secondArg){
+            alert(firstArg + ">" + secondArg);
+        } else {
+            alert("Tổng: " + calculator);
+        }
+    }
+    let so1 = parseFloat(prompt("Nhập số thứ nhất: "));
+    let so2 = parseFloat(prompt("Nhập số thứ 2: "));
+    myFunction(so1,so2)
+</script>
+</body>
+</html>
