@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    let input=prompt("Nhập giới hạn của số nguyên tố =  ");
+    document.write("Số nguyên tố từ 0 --> "+ input + " là : " + numPrime(input));
+
+    function numPrime(n) {
+        let result = "";
+        for(let num=2; num<n; num++){
+            let check = checkPrime(num);
+            if(check){
+                result += num + " ";
+            }
+        }
+        return result;
+    }
+    function checkPrime(num) {
+        let check=true;
+        for(let i=2; i<=Math.sqrt(num); i++) {
+            if (num % i == 0) {
+                check = false;
+            }
+        }
+        return check;
+    }
+
+</script>
+</body>
+</html>
